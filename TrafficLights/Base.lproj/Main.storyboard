@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-KA-HM5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="xnU-JN-RsL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="354" id="aTU-ak-Vt7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-Jn-t2c">
+                                <rect key="frame" x="112" y="497" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vj1-Jn-t2c" secondAttribute="height" multiplier="1:1" id="cr4-Xo-Gij"/>
+                                    <constraint firstAttribute="height" constant="150" id="xAw-zL-p81"/>
+                                    <constraint firstAttribute="width" constant="150" id="zv0-RD-OwM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="Start" backgroundImage="redButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aw3-np-lWc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH9-1m-jSy">
+                                <rect key="frame" x="16" y="362" width="343" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="L43-cc-gof"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fwp-KA-HM5" secondAttribute="bottom" id="3fC-P3-RWO"/>
+                            <constraint firstItem="Vj1-Jn-t2c" firstAttribute="top" secondItem="nH9-1m-jSy" secondAttribute="bottom" constant="8" symbolic="YES" id="788-KR-hXK"/>
+                            <constraint firstItem="Vj1-Jn-t2c" firstAttribute="centerX" secondItem="xnU-JN-RsL" secondAttribute="centerX" id="Dyz-Xr-A1v"/>
+                            <constraint firstItem="nH9-1m-jSy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="F73-Mc-oRB"/>
+                            <constraint firstItem="xnU-JN-RsL" firstAttribute="trailing" secondItem="Fwp-KA-HM5" secondAttribute="trailing" id="KfZ-24-G9A"/>
+                            <constraint firstAttribute="trailing" secondItem="Fwp-KA-HM5" secondAttribute="trailing" id="YWs-JW-RCW"/>
+                            <constraint firstItem="Vj1-Jn-t2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="a97-hv-hue"/>
+                            <constraint firstItem="xnU-JN-RsL" firstAttribute="top" secondItem="Fwp-KA-HM5" secondAttribute="top" id="cem-Y5-lNR"/>
+                            <constraint firstItem="Fwp-KA-HM5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fZd-Pf-mhX"/>
+                            <constraint firstItem="Fwp-KA-HM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lpu-RK-g1K"/>
+                            <constraint firstItem="nH9-1m-jSy" firstAttribute="top" secondItem="xnU-JN-RsL" secondAttribute="bottom" constant="8" symbolic="YES" id="pXg-Hi-3fW"/>
+                            <constraint firstAttribute="bottom" secondItem="Vj1-Jn-t2c" secondAttribute="bottom" constant="20" symbolic="YES" id="xg3-3b-sSK"/>
+                            <constraint firstItem="Vj1-Jn-t2c" firstAttribute="centerX" secondItem="nH9-1m-jSy" secondAttribute="centerX" id="zY9-VO-CEa"/>
+                            <constraint firstItem="xnU-JN-RsL" firstAttribute="leading" secondItem="Fwp-KA-HM5" secondAttribute="leading" id="zsA-XM-DyZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="nH9-1m-jSy" id="ZQ3-ee-fw6"/>
+                        <outlet property="startStopButton" destination="Vj1-Jn-t2c" id="eB2-ed-Ug7"/>
+                        <outlet property="trafficLight" destination="xnU-JN-RsL" id="NTu-cZ-ZkZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Road" width="1674" height="1902"/>
+        <image name="TrafficLight" width="550" height="900"/>
+        <image name="redButton" width="1353" height="1353"/>
+    </resources>
+</document>
